@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    
+<head> 
+ 
+    <link rel="stylesheet" type="text/css" href="booking1.css">
+ </head>
+    <style>
+      body{
+        background-image:url("blur.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+       
+        h1{text-align: center;}
+        h3{
+          color:white;
+        }
+     </style>
+     <style>
+     h1{
+         font-size: 70px;
+         color:black;
+          background-color: aliceblue;
+     }
+    </style>
+    <script>
+      function validateForm() {
+        
+           var x=document.getElementById("checkin-date").value;
+           var y=document.getElementById("checkout-date").value;        
+           if(Date.parse(x)>Date.parse(y))
+           {
+             alert("Date is invalid");
+             return false;
+           }
+          
+           var z=document.getElementById("amount").value;
+          if(z<10000)
+          {
+            alert("check the room prices again");
+            return false;
+          }
+          
+          }
+    </script>
+
+<body >
+    <h1>Booking</h1>
+</body>
+
+<form name="myForm" action="w3.html"  onsubmit="return validateForm()" method="post"  >
+  <table>
+  
+</table>
+  <div class="elem-group">
+    <label for="name"  >Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="Name Surname" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="xyz.abc@email.com"  required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="7666174120" pattern=[6-9]{1}[0-9]{9} required>
+  </div>
+  
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adult</label>
+    <input type="number" id="adult" name="total_adults" placeholder="2" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="adult">Children</label>
+    <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+  </div>
+
+
+  <table >
+  <div class="elem-group">
+    <tr>
+     <td>
+      <label for="name" ><b>DESCRIPTION OF PRICES</b></label>
+     </td> 
+    </tr>
+    <tr>
+      <td>
+     <h3>Non Ac : 10000 rupees per person </h3>
+     
+
+         </td> 
+     </tr>
+     <tr>
+      <td>
+        <h3>Ac    : 15000 rupees per person</h3>
+    
+      </td> 
+     </tr>
+     <tr>
+      <td>
+        <h3>
+          Deluxe : 20000 rupees per person
+        </h3>
+    
+      </td> 
+     </tr>
+     <tr>
+      <td>
+        <h3>
+          Luxury : 30000 rupees per person
+        </h3>
+    
+      </td> 
+     </tr>
+    </div>
+      
+</table>
+
+<table>
+  <div class="elem-group">
+    
+    <tr>
+      <td>
+        <label for="name"><b>ROOMS</b></label>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <h3>NON-AC</h3></td>
+      <td>
+        <input type="radio" id="name" name="visitor_name" required>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          AC
+        </h3>
+        
+      </td>
+      <td>
+        <input type="radio" id="name" name="visitor_name" required>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          DELUXE
+        </h3>
+       
+      </td>
+      <td>
+        <input type="radio" id="name" name="visitor_name" required>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          LUXURY
+
+        </h3>
+        
+      </td>
+      <td>
+        <input type="radio" id="name" name="visitor_name" required>
+      </td>
+
+    </tr>      
+</div>
+</table>  
+
+<div class="elem-group">
+<label for="name" >Number of Rooms required</label>
+<input type="text" id="name" name="visitor_name" placeholder="1" pattern=[1-9] required>
+  </div>
+ <div class="elem-group">
+    <label for="room-selection">Select Room Preference</label>
+    <select id="room-selection" name="room_preference" required>
+        <option value="">Choose a Room from the List</option>
+        <option value="connecting">Connecting</option>
+        <option value="adjoining">Adjoining</option>
+        <option value="adjacent">Adjacent</option>
+    </select>
+  </div>
+  <table>
+    <div class="elem-group">
+      
+      <tr>
+        <td>
+          <label for="name"><b>Identity proof</b></label>
+        </td>
+  
+      </tr>
+      <tr>
+        <td>
+          <h3>Aadhar Card</h3></td>
+        <td>
+          <input type="radio" id="name" name="visitor_name" required>
+        </td>
+  
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            Pan Card
+          </h3>
+          
+        </td>
+        <td>
+          <input type="radio" id="name" name="visitor_name" required>
+        </td>
+  
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            Voter Id
+          </h3>
+         
+        </td>
+        <td>
+          <input type="radio" id="name" name="visitor_name" required>
+        </td>
+  
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            Passport
+  
+          </h3>
+          
+        </td>
+        <td>
+          <input type="radio" id="name" name="visitor_name" required>
+        </td>
+  
+      </tr>      
+  </div>
+  </table>  
+  
+  <div class="elem-group">
+    <label for="name" >Attach Identity Proof</label>
+    <input type="file" id="proof" name="visitor_name" required>
+    
+      </div>
+
+  <div class="elem-group inlined">
+    <label for="checkin-date">Check-in Date</label>
+    <input type="date" id="checkin-date" name="checkin"  required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Check-out Date</label>
+    <input type="date" id="checkout-date" name="checkout" required>
+  </div>
+  <div class="elem-group">
+    <label for="amount" >Enter Amount</label>
+    <input type="number" id="amount" name="visitor_name" placeholder="10000"  required>
+      </div>
+
+  <hr>
+
+ 
+  <button type="submit">Book The Rooms</button>
+</form>
+</html>

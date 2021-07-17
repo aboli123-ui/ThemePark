@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         body{
+           text-align: center;
+           font-size: 50px;
+           background-image:url("a10.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+         }
+        form{
+            display: inline-block;
+           
+  margin-left: 1%;
+         }
+         h1{
+            color: red;
+         }
+        
+
+         
+       
+      </style>
+         <body>
+            <h3>BOOKING FORM</h3>
+         </body>
+
+         <script type="text/javascript" language="JavaScript">
+   
+         function isNumeric(value) 
+         {
+                return /^[a-z\sA-Z]+$/.test(value); 
+              
+         }
+        </script>
+        <script>
+         
+         function validateForm(theForm) {
+          
+            var x = document.forms["myForm"]["fname"].value;
+           var y = isNumeric(x) 
+           if (y==false) {
+             alert("Name must be filled out");
+             return false;
+           }
+         
+         //maximum length of password validation     
+           var what= document.forms["myForm"]["add"].value; 
+           if(what=="")
+           {
+               alert("Please enter your Address");
+               return false;
+           }
+          
+           var y= document.forms["myForm"]["gen"].value; 
+           if(y=="")
+           {
+               alert("gender must be filled out")
+               return false;
+           }
+          
+           var i= document.forms["myForm"]["ag"].value; 
+   
+         
+    var checkBox1 = document.getElementById("myCheck1");
+    var checkBox2 = document.getElementById("myCheck2");
+    var checkBox3 = document.getElementById("myCheck3");
+    var checkBox4 = document.getElementById("myCheck4");
+    var checkBox5 = document.getElementById("myCheck5"); 
+    
+        if (
+        checkBox1.checked == false &&
+      checkBox2.checked == false && checkBox3.checked == false &&checkBox4.checked == false && checkBox5.checked == false  )
+        {
+            alert ('You didn\'t choose any of the checkboxes!');
+            return false;
+        } 
+       
+       if(checkBox1.checked==true && i<18)
+       {
+         alert ('Age is not compatile for this ride');
+            return false;
+       }
+       var atposition=z.Indexof("a")
+           var dotposition=z.lastIndexof(".")
+          
+           if(atposition<11||dotposition<atposition+2||dotposition+2>=z.length)
+           {
+               alert("enter valid email");
+               return false;
+           }
+   }
+        
+      </script>
+      <script>
+         function myFunction() {
+    var checkBox1 = document.getElementById("myCheck1");
+    var checkBox2 = document.getElementById("myCheck2");
+    var checkBox3 = document.getElementById("myCheck3");
+    var checkBox4 = document.getElementById("myCheck4");
+    var checkBox5 = document.getElementById("myCheck5"); 
+    var text1 = document.getElementById("text1");
+    var text2 = document.getElementById("text2");
+    var text3 = document.getElementById("text3");
+    var text4 = document.getElementById("text4");
+    var text5 = document.getElementById("text5");
+    var text6 = document.getElementById("text6");
+    var text7 = document.getElementById("text7");
+    var text8 = document.getElementById("text8");
+    var text9 = document.getElementById("text9");
+    var text10 = document.getElementById("text10");
+   
+   
+
+    var dis1, dis2, dis3,dis4,dis5,dis6,dis7,dis8,dis9,dis10;
+    dis1 = dis2 = dis3=dis4=dis5=dis6=dis7=dis8=dis9=dis10="none";
+    if (checkBox1.checked == true && checkBox3.checked == true&& checkBox2.checked==true){
+        dis7  = "block";
+        
+    } else if (checkBox1.checked == true && checkBox2.checked == true){
+        dis4  = "block";
+       
+    }else if (checkBox2.checked == true && checkBox3.checked == true){
+        dis5 = "block";
+       
+    }else if (checkBox1.checked == true && checkBox3.checked == true){
+        dis6  = "block";
+       
+    } else if (checkBox1.checked == true){
+        dis1 = "block";
+        
+    }else if (checkBox2.checked == true){
+        dis2 = "block";
+       
+    }else if (checkBox3.checked == true){
+        dis3 = "block";
+        
+    } 
+    else if (checkBox4.checked == true ){
+        dis8  = "block";
+        
+    }
+    else if (checkBox5.checked == true ){
+        dis9  = "block";   
+    }
+    text1.style.display = dis1;
+    text2.style.display = dis2;
+    text3.style.display = dis3;
+    text4.style.display = dis4;
+    text5.style.display = dis5;
+    text6.style.display = dis6;
+    text7.style.display = dis7;
+    text8.style.display = dis8;
+    text9.style.display = dis9;
+    text10.style.display = dis10;
+   }
+      </script>
+   </head>
+   <body bgcolor="honeydew">
+     
+      <form name="myForm" action="w3.html" onsubmit="return validateForm();" method="post">
+         <table>
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Name</b>
+                  <font size="5" color=red>
+                  <b>*</b>
+                  </font>
+                  </font>
+               </td>
+               <td>
+                  <input type="text" name="fname" style="text-transform:Uppercase" required>
+               </td>
+            </tr>
+           
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Address</b>
+                  <font size="5" color=red>
+                     <b>*</b>
+                     </font>
+                  </font>
+               </td>
+               <td>
+                  <textarea rows=5 column=25 name="add"></textarea>
+               </td>
+            </tr>
+       
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Gender</b>
+                  <font size="5" color=red>
+                     <b>*</b>
+                     </font>
+                  </font>
+               </td>
+               <td>
+                  <input type="radio" name="gen"><font size="3" color=black>Female</font>
+                  <input type="radio" name="gen"><font size="3" color=black>Male</font>
+               </td>
+            </tr>
+           
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Contact</b>
+                  <font size="5" color=red>
+                     <b>*</b>
+                     </font>
+                     
+                  </font>
+               </td>
+               <td>
+                  <input type="tel" id="phone" name="phone"  placeholder="7666174120" pattern="[6-9]{1}[0-9]{7}[0-9]{2}" required>  
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Age</b>
+                  <font size="5" color=red>
+                     <b>*</b>
+                     </font>
+                  </font>
+               </td>
+               <td>
+                  <input type="number" name="ag" min="0" required>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Photo</b>
+                  <font size="5" color=red>
+                     <b>*</b>
+                     </font>
+                  </font>
+               </td>
+               <td>
+                  <input type="file" accept="image/*">
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Comments</b>
+                  </font>
+               </td>
+               <td>
+                  <textarea rows=4 column=20></textarea>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <font size="5" color=black>
+                  <b>Ride_Date</b><font size="5" color=red><b>*</b> </font>
+                  
+               </td>
+               <td>
+                  <input type="date" required>
+               </td>
+            </tr>
+         <tr>
+         <td>
+            <font size="5" color=black>
+            <b>Rides</b>
+            <font size="5" color=red>
+               <b>*</b>
+               </font>
+            </font>
+         </td>
+          <td>
+            <font size="3">
+              
+             <input type="checkbox" id="myCheck1" onclick="myFunction()" ><b>SCREAM MACHINE</b>
+              <input type="checkbox" id="myCheck2"  onclick="myFunction()"> <b>ZIP ZAM ZAP</b>
+              <input type="checkbox" id="myCheck3"  onclick="myFunction()"><b>DEEP SPACE</b>
+               <input type="checkbox" id="myCheck4"  onclick="myFunction()"><b>MAMBO CHAI CHAMA</b>
+               <input type="checkbox" id="myCheck5"  onclick="myFunction()"><b>DARE 2 DROP</b>
+             <h1> <p id="text1" style="display:none">Your total price for ride is :$5</p></h1>
+              <h1><p id="text2" style="display:none">Your total price for ride is:$10</p><h1>
+              <h1><p id="text3" style="display:none">Your total price for ride is:$15</p></h1>
+              <h1><p id="text4" style="display:none">Your total price for ride is:$15</p></h1>
+              <h1> <p id="text5" style="display:none">Your total price for ride is:$25</p></h1>
+             <h1> <p id="text6" style="display:none">Your total price for ride is:$20</p></h1>
+             <h1> <p id="text7" style="display:none">Your total price for ride is:$30</p></h1>
+             <h1> <p id="text8" style="display:none">Free of Cost</p></h1>
+             <h1> <p id="text9" style="display:none">Free of Cost</p></h1>
+           
+            </font>             
+         </td> 
+          
+        </tr>
+        <tr>
+         <td>
+            <font size="5" color=black>
+            <b>Email</b>
+            <font size="5" color=red>
+               <b>*</b>
+               </font>
+            </font>
+         </td>
+         <td>
+            <input type="email" name="em" required>
+         </td>
+      </tr>
+         </table>
+        
+         <input type="reset" value="Reset">
+      
+         <input type="Submit" value="Procced to pay">
+        
+      </form>
+   
+   </body>
+</html>
